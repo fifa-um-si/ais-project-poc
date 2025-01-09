@@ -9,11 +9,11 @@
     "start": "node index.js"
   },
    "dependencies": {
-    "chalk": "2.4.1",
-    "lodash": "4.17.10",
-    "express": "4.16.0"    
+    "chalk": "5.4.1",
+    "lodash": "4.17.21",
+    "express": "4.21.2"    
   },
   "devDependencies": {
-    "mocha": "5.2.0"    
+    "mocha": "11.0.1"    
   }
 }
