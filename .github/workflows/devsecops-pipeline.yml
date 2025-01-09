@@ -12,17 +12,17 @@ on:
 
 jobs:
   dependabot:
-    name: Dependabot Dependency Updates
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Run Dependabot
-        uses: dependabot/fetch-metadata@v1
-        with:
-          dependency-name: "dependencies"
-          update-type: "security"
+      name: Dependabot Dependency Updates
+      if: github.actor == 'dependabot[bot]'
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v3
+  
+        - name: Fetch Dependabot Metadata
+          uses: dependabot/fetch-metadata@v1
+          with:
+            github-token: ${{ secrets.GITHUB_TOKEN }}
 
   snyk:
     name: Snyk Vulnerability Scan
