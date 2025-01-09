@@ -66,6 +66,6 @@ jobs:
         with:
           args: >
             -Dsonar.token=${SONAR_TOKEN}
-            -Dsonar.projectKey=ais-project-poc
+            -Dsonar.projectKey=fifa-um-si_ais-project-poc
             -Dsonar.organization=fifa-um-si
             -Dsonar.host.url=https://sonarcloud.io
