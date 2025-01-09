@@ -65,6 +65,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
+            -Dsonar.token=${SONAR_TOKEN}
             -Dsonar.projectKey=ais-project-poc
             -Dsonar.organization=fifa-um-si
             -Dsonar.host.url=https://sonarcloud.io
