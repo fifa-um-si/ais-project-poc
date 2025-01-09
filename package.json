@@ -10,7 +10,7 @@
   },
    "dependencies": {
     "chalk": "2.4.1",
-    "lodash": "4.17.10",
+    "lodash": "4.17.21",
     "express": "4.16.0"    
   },
   "devDependencies": {
