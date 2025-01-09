@@ -48,7 +48,6 @@ jobs:
 
   sonarcloud:
     name: SonarCloud Code Quality and Security Analysis
-    if: github.actor != 'dependabot[bot]'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -61,6 +60,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Run SonarCloud Scan
+        if: github.actor != 'dependabot[bot]'
         uses: sonarsource/sonarcloud-github-action@v4.0.0
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
