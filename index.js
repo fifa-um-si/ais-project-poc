@@ -15,3 +15,5 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(chalk.blue(`Server is running at http://localhost:${port}`));
 });
+
+// small change
